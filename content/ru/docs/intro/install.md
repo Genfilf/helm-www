@@ -5,7 +5,7 @@ weight: 2
 ---
 
 В этом руководстве рассказывается, как установить Helm CLI. Helm может быть установлен как из
-исходного кода, так и из собранных binary релизов.
+исходного кода, так и с помощью заранее собранных binary релизов.
 
 ## Из Проекта Helm
 
@@ -21,9 +21,9 @@ weight: 2
 
 1. Скачайте нужную вам [версию](https://github.com/helm/helm/releases)
 2. Распакуйте её (`tar -zxvf helm-v3.0.0-linux-amd64.tar.gz`)
-3. Найдите `helm` binary файл в директории из распаковки, и переместите в нужное место (`mv linux-amd64/helm /usr/local/bin/helm`)
+3. Найдите binary файл `helm` в распакованной директории, и переместите его в нужное место (`mv linux-amd64/helm /usr/local/bin/helm`)
 
-Сразу после этого можно запустить Helm справку [добавить stable репозиторий](https://helm.sh/docs/intro/quickstart/#initialize-a-helm-chart-repository):
+После этого вы сможете запустить клиент Helm и [добавить stable репозиторий](https://helm.sh/docs/intro/quickstart/#initialize-a-helm-chart-repository):
 `helm help`.
 
 **Примечание:** Автоматические тесты Helm выполняются для Linux AMD64 только во время сборки и выпуска CircleCI.
@@ -31,11 +31,11 @@ weight: 2
 
 ### Из Скрипта
 
-У Helm теперь есть скрипт установки, которая будет автоматически загружать последнюю версию Helm и 
-[устанавливать его локально](https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3).
+У Helm теперь есть скрипт установки, который автоматически загрузит последнюю версию Helm и 
+[установит его локально](https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3).
 
-Вы можете получить этот сценарий, а затем выполнить его локально.
-Он хорошо документирован, так что вы можете прочитать его и понять, что он делает, прежде чем запускать.
+Вы можете получить этот скрипт, а затем выполнить его локально.
+Он хорошо задокументирован, так что вы можете прочесть его и понять что он делает, прежде чем его запускать.
 
 ```console
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
@@ -68,7 +68,7 @@ brew install helm
 
 Члены сообщества Helm внесли свой вклад в [Helm
 пакет](https://chocolatey.org/packages/kubernetes-helm) собранный под
-[Chocolatey](https://chocolatey.org/). Данная сборка почти всегда актуальна
+[Chocolatey](https://chocolatey.org/). Данная сборка почти всегда актуальна.
 
 ```console
 choco install kubernetes-helm
@@ -77,7 +77,7 @@ choco install kubernetes-helm
 ### Используя Apt (Debian/Ubuntu)
 
 Члены сообщества Helm внесли свой вклад в [Helm
-package](https://helm.baltorepo.com/stable/debian/) для Apt. Данная сборка почти всегда актуальна
+package](https://helm.baltorepo.com/stable/debian/) для Apt. Данная сборка почти всегда актуальна.
 
 ```console
 curl https://baltocdn.com/helm/signing.asc | sudo apt-key add -
@@ -89,7 +89,7 @@ sudo apt-get install helm
 
 ### Используя Snap
 
-[Snapcrafters](https://github.com/snapcrafters) сообщество поддерживает Snap-версию
+Сообщество [Snapcrafters](https://github.com/snapcrafters) поддерживает Snap-версию
 [Helm пакета](https://snapcraft.io/helm):
 
 ```console
@@ -101,7 +101,7 @@ sudo snap install helm --classic
 Члены сообщества FreeBSD внесли свой вклад в создание [Helm
 пакета](https://www.freshports.org/sysutils/helm) под
 [FreeBSD Ports Collection](https://man.freebsd.org/ports).
-Данная сборка почти всегда актуальна
+Данная сборка почти всегда актуальна.
 
 ```console
 pkg install helm
@@ -109,7 +109,7 @@ pkg install helm
 
 ### Тестовые Сборки
 
-В дополнение к релизам вы можете скачать или установить тестовые сборки
+В дополнение к релизам вы можете скачать или установить тестовые сборки Helm.
 
 ### Используя Canary Сборки
 
@@ -127,8 +127,8 @@ Canary Helm binaries сборки хранятся в [get.helm.sh](https://get.
 
 ### Из Исходного Кода (Linux, macOS)
 
-Создание Helm из исходного кода-это немного больше работы, но это лучший способ пойти, если
-вы хотите протестировать последнюю версию (pre-release) Helm.
+Сборка Helm из исходного кода требует больше усилий, но это лучший способ, если
+вы хотите протестировать последнюю (pre-release) версию Helm.
 
 У вас должна быть рабочая среда Go.
 
@@ -143,7 +143,7 @@ $ make
 
 ## Заключение
 
-В большинстве случаев установка так же проста, как получение предварительно построенного binary файла `helm`.
+В большинстве случаев установка так же проста, как получение заранее собранного binary файла `helm`.
 В этом документе описаны дополнительные случаи для тех, кто хочет делать
 с Helm более сложные вещи.
 
